@@ -29,8 +29,8 @@ public class JavaTask3 {
     static int[][] step1(int n) {
         Random rand = new Random();
         int[][] matrix;
-        boolean containsN = false;
-        boolean containsNegN = false;
+        boolean containsN;
+        boolean containsNegN;
 
         do {
             matrix = new int[n][n];
@@ -70,7 +70,7 @@ public class JavaTask3 {
                 if (row[j] > 0) {
                     if (firstPositiveIndex == -1) {
                         firstPositiveIndex = j;
-                    } else if (secondPositiveIndex == -1) {
+                    } else {
                         secondPositiveIndex = j;
                         break;
                     }
